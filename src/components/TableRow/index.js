@@ -8,6 +8,7 @@ function MyTableRow(props) {
       <td>{props.lastname}</td>
       <td>{props.email}</td>
       <td>{props.state}</td>
+      <td>{props.gender}</td>
     </tr>
     )
 }
