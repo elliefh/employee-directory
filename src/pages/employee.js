@@ -21,8 +21,9 @@ function Employee() {
         .catch((err) => console.log("Error: " + err));
     };
 
-    // Sort first name
+    // Sort by first name
 
+    
     // Filter 
 
     return (
@@ -36,6 +37,7 @@ function Employee() {
                   lastname = {employee.name.last}
                   email = {employee.email}
                   state = {employee.location.state}
+                  gender = {employee.gender}
                   key={employee.id.value}
                 />
               ))}
