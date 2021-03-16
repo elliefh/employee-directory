@@ -10,6 +10,7 @@ return(
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
+        <th>State</th>
         </tr>
     </thead>
     <tbody>

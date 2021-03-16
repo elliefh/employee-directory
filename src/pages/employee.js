@@ -35,6 +35,7 @@ function Employee() {
                   firstname = {employee.name.first}
                   lastname = {employee.name.last}
                   email = {employee.email}
+                  state = {employee.location.state}
                   key={employee.id.value}
                 />
               ))}
