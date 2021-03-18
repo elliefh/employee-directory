@@ -27,7 +27,7 @@ function MyTable(props) {
                     <DropdownButton as={ButtonGroup} title="Filter By" id="bg-nested-dropdown" variant="outline-secondary btn-sm m-2">
                     <Dropdown.Item eventKey="1">male</Dropdown.Item>
                     <Dropdown.Item eventKey="2">female</Dropdown.Item>
-                    <Dropdown.Item eventKey="2">all</Dropdown.Item>
+                    <Dropdown.Item eventKey="3">all</Dropdown.Item>
                     </DropdownButton>
                 </ButtonGroup>
             </th>
