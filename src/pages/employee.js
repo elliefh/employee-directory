@@ -22,14 +22,24 @@ function Employee() {
     };
 
     // Sort by first name
-
-    
-    // Filter 
+    const firstnamesort = () => {
+      const name = employees.sort((a, b) => (a.name.first > b.name.first ? 1 : -1));
+      setEmployees([...name]);
+    }
+    // Sort by last name
+    const lastnamesort = () => {
+      const name = employees.sort((a, b) => (a.name.last > b.name.last ? 1 : -1));
+      setEmployees([...name]);
+    }
+    // Filter by gender
 
     return (
         <div className="container">
           <Container>
-            <MyTable>
+            <MyTable
+            firstnamesort = {firstnamesort} 
+            lastnamesort = {lastnamesort}
+            >
               {employees.map(employee => (
                 <MyTableRow 
                   image = {employee.picture.thumbnail}
