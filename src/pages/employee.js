@@ -6,7 +6,7 @@ import MyTableRow from "../components/TableRow";
 
 function Employee() {
     const [employees, setEmployees] = useState([]);
-  
+    
     // upon page load, call method to get employees
     useEffect(() => {
       getEmployees();
@@ -31,8 +31,12 @@ function Employee() {
       const name = employees.sort((a, b) => (a.name.last > b.name.last ? 1 : -1));
       setEmployees([...name]);
     }
-    // Filter by gender
+    // Filter by gender: male
 
+    // Filter by gender: female
+      
+    // No filter
+      
     return (
         <div className="container">
           <Container>
