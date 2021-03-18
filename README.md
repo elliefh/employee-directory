@@ -13,7 +13,7 @@
 
 Employee Directory is a web application that allows an employee or manager to view non-sensitive data about other employees. The user can sort and filter employees by name and gender. The application uses random users generated from the [Random User API](https://randomuser.me/); when the user loads the page, a table of employees  render. 
 
-![Image]
+![Image](assets/employee-directory.png)
 
 ## Links
 - [Repository](https://github.com/elliefh/employee-directory)
