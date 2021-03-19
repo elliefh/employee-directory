@@ -6,6 +6,7 @@ import MyTableRow from "../components/TableRow";
 
 function Employee() {
     const [employees, setEmployees] = useState([]);
+    const [originalEmployees, setOriginalEmployees] = useState([]);
     
     // upon page load, call method to get employees
     useEffect(() => {
@@ -16,8 +17,9 @@ function Employee() {
     const getEmployees = () => {
       API.getEmployees()
         .then((res) => {
-          console.log(res.data.results)
-          setEmployees(res.data.results)})
+          setEmployees(res.data.results)
+          setOriginalEmployees(res.data.results)
+        })
         .catch((err) => console.log("Error: " + err));
     };
 
@@ -32,10 +34,20 @@ function Employee() {
       setEmployees([...name]);
     }
     // Filter by gender: male
+    const filtermale = () => {
+      const gender = originalEmployees.filter(a => a.gender === "male");
+      setEmployees([...gender]);
+    }
+    // Filter by gender: female
+    const filterfemale = () => {
+      const gender = originalEmployees.filter(a => a.gender === "female");
+      setEmployees([...gender]);
+    }
 
     // Filter by gender: female
-      
-    // No filter
+    const nofilter = () => {
+      setEmployees([...originalEmployees]);
+    }
       
     return (
         <div className="container">
@@ -43,6 +55,9 @@ function Employee() {
             <MyTable
             firstnamesort = {firstnamesort} 
             lastnamesort = {lastnamesort}
+            filtermale = {filtermale}
+            filterfemale = {filterfemale}
+            nofilter = {nofilter}
             >
               {employees.map(employee => (
                 <MyTableRow 
