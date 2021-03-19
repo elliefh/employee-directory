@@ -17,7 +17,7 @@ Employee Directory is a web application that allows an employee or manager to vi
 
 ## Links
 - [Repository](https://github.com/elliefh/employee-directory)
-- [Deployed]()
+- [Deployed](https://elliefh.github.io/employee-directory/)
 
 ## Installation
 The following command should be run to install necessary dependencies: 
